@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         cmake \
         curl \
+        git \
         libcurl3-dev \
         libfreetype6-dev \
         libhdf5-serial-dev \

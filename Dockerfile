@@ -25,3 +25,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN python -m pip install --no-cache-dir -U pip && \
     python -m pip install --no-cache-dir -U setuptools wheel
+
+RUN python -m pip install --upgrade pip 

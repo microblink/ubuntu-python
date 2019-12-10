@@ -26,5 +26,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN python -m pip install --no-cache-dir -U pip && \
     python -m pip install --no-cache-dir -U setuptools wheel
 
+RUN echo "Update pip to 19.3.1"
+
 RUN python -m pip install --upgrade pip
 RUN python -m pip install --upgrade setuptools

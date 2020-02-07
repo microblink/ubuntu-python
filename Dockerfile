@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         zlib1g-dev \
         wget \
     && \
-    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
 

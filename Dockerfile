@@ -20,8 +20,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         wget \
     && \
     rm -rf /var/lib/apt/lists/* && \
-    ln -sf /usr/bin/python3.7 /usr/bin/python3 && \
-    ln -s /usr/bin/python3 /usr/bin/python
+
+RUN sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
 
 RUN python -m pip install --no-cache-dir -U pip && \
     python -m pip install --no-cache-dir -U setuptools wheel
@@ -30,4 +30,5 @@ RUN python -m pip install --upgrade pip==19.3.1
 RUN python -m pip install --upgrade setuptools
 
 RUN printf "[global]\nindex-url = http://pypi.microblink.com/\ntrusted-host = pypi.microblink.com" > /etc/pip.conf
+
 

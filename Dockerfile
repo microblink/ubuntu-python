@@ -28,3 +28,6 @@ RUN python -m pip install --no-cache-dir -U pip && \
     
 RUN python -m pip install --upgrade pip==19.3.1
 RUN python -m pip install --upgrade setuptools
+
+RUN printf "[global]\nindex-url = http://pypi.microblink.com/\ntrusted-host = pypi.microblink.com" > /etc/pip.conf
+

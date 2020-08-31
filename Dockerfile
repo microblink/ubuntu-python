@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && \
     rm -rf /var/lib/apt/lists/*
 
-RUN sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
 
 RUN python -m pip install --no-cache-dir -U pip && \
     python -m pip install --no-cache-dir -U setuptools wheel

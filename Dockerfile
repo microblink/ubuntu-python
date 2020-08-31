@@ -23,11 +23,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
 
-RUN python -m pip install --no-cache-dir -U pip && \
-    python -m pip install --no-cache-dir -U setuptools wheel
-    
-RUN python -m pip install --upgrade pip==20.2.2
-RUN python -m pip install --upgrade setuptools==50.0.0 
+RUN python -m pip install pip==20.2.2
+RUN python -m pip install setuptools==50.0.0 
+RUN python -m pip install wheel==0.35
 
 RUN printf "[global]\nindex-url = http://pypi.microblink.com/\ntrusted-host = pypi.microblink.com" > /etc/pip.conf
 

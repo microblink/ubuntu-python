@@ -26,8 +26,8 @@ RUN sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7
 RUN python -m pip install --no-cache-dir -U pip && \
     python -m pip install --no-cache-dir -U setuptools wheel
     
-RUN python -m pip install --upgrade pip==19.3.1
-RUN python -m pip install --upgrade setuptools
+RUN python -m pip install --upgrade pip==20.2.2
+RUN python -m pip install --upgrade setuptools==50.0.0 
 
 RUN printf "[global]\nindex-url = http://pypi.microblink.com/\ntrusted-host = pypi.microblink.com" > /etc/pip.conf
 

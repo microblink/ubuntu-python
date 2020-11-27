@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         zip \
         zlib1g-dev \
         wget \
+        openssh-server \
     && \
     rm -rf /var/lib/apt/lists/*
 

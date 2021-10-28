@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libhdf5-serial-dev \
         libpng-dev \
         libzmq3-dev \
+        libgl1 \
         pkg-config \
         python3.7-dev \
         python3-pip \
